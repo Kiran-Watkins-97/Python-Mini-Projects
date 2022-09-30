@@ -48,7 +48,28 @@ for rawstring in wd_set:
 print(wd_dict)
 
 
-# Turn the dictionary into a list using the list data constructor
-# This only prints the words (keys) and not their definitions
-wd_list = list(wd_dict)
-print(wd_list)
+# This is a game where it finds a word and its definition and 3 random definitions
+# The user can then select which is the correct one
+while True:
+    # Turn the dictionary into a list using the list data constructor
+    # This only prints the words (keys) and not their definitions
+    wd_list = list(wd_dict)
+    choice_list = []
+    for x in range(4):
+        word, definition = get_defn_and_pop(wd_list, wd_dict)
+        choice_list.append(definition)
+    random.shuffle(choice_list)
+
+    print(word)
+    print("------------")
+    for idx, choice in enumerate(choice_list):
+        print(idx+1, choice)
+    choice = int(input("Enter 1, 2, 3, 4; or 0 to exit:"))
+    if choice_list[choice -1] == definition:
+        print("Correct")
+        print(word, " means:", definition)
+    elif choice == 0:
+        exit(0)
+    else:
+        print("Incorrect")
+
