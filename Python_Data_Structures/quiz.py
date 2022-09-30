@@ -1,3 +1,11 @@
+import random
+
+
+def get_word_and_definition(rawstring: str) -> (str, str):
+    word, definition = rawstring.split(",", 1)
+    return word, definition
+
+
 # Open file using the open function and assigning this to the file handle (fh)
 fh = open(r'Vocabulary_list.csv', 'r')
 
@@ -23,3 +31,11 @@ print(wd_set)
 fh = open("Vocabulary_set.csv", "w")
 fh.writelines(wd_set)
 
+# Create a blank dictionary by calling the constructor for it
+wd_dict = dict()
+
+for rawstring in wd_set:
+    wd, defn = get_word_and_definition(rawstring)
+    wd_dict[wd] = defn
+
+print(wd_dict)
