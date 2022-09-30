@@ -1,0 +1,9 @@
+email:judy@exampl.com
+dave@example.com
+hashem@exampl.com
+email:fred@exampl.com
+ali@example.com
+ej@example.com
+dan.win@example.com
+f+j@example
+email:d-j@example.com
