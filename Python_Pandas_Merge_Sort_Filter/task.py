@@ -49,4 +49,3 @@ sns.jointplot(data = df_merge, x='Rainfall', y='Temperature',  kind='reg')
 plt.show()
 
 Test 1
-Test 2
