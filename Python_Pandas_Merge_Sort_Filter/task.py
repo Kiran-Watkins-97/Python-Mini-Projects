@@ -47,5 +47,3 @@ sns.jointplot(data = df_merge, x='Rainfall', y='Temperature',  kind='reg')
 # Show the scatter pot using the pyplot function show
 # Note this shows all currently plotted graphs
 plt.show()
-
-Test 1
