@@ -36,7 +36,14 @@ print(df_merge_sort_rain_asc)
 df_merge_sort_rain_desc = df_merge.sort_values(by='Rainfall', ascending=False)
 print(df_merge_sort_rain_desc)
 
+
+# Synthesize the seaborn window
+sns.set(rc={'figure.figsize': (12, 6)})
+
+# Then plot a regression using seaborn jointplot function
+sns.jointplot(data = df_merge, x='Rainfall', y='Temperature',  kind='reg')
+
+
 # Show the scatter pot using the pyplot function show
 # Note this shows all currently plotted graphs
-# plt.show()
-
+plt.show()
