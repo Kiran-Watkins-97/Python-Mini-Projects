@@ -20,6 +20,11 @@ df_rain_f = df_rain.query('Rainfall < 6 and Rainfall > 0')
 df_temp_f.plot.scatter(x='Year', y='Temperature', label='Temperature by Year')
 df_rain_f.plot.scatter(x='Year', y='Rainfall', label='Rainfall by Year')
 
+# Merge the two dataframe using the merge function and with how set to outer
+df_merge = pd.merge(df_temp_f, df_rain_f, on='Year', how='outer')
+print(df_merge)
+
 # Show the scatter pot using the pyplot function show
 # Note this shows all currently plotted graphs
 plt.show()
+
