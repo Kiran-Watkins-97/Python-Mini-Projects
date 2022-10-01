@@ -10,11 +10,11 @@ iters = []
 for i in range(10):
     # task 2: create the return_element function
     # gen a random index into the array
-    index = random.randint(0,len(arr)-1)
+    index = random.randint(0, len(arr)-1)
     result, count = return_element(arr, index)
-    iters.append (count)
-    size.append (len(arr))
+    iters.append(count)
+    size.append(len(arr))
     
-    arr+=arr
+    arr += arr
     
-plot (size, iters)
+plot(size, iters)
