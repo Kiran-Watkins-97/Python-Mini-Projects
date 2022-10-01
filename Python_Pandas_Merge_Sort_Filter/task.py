@@ -21,10 +21,22 @@ df_temp_f.plot.scatter(x='Year', y='Temperature', label='Temperature by Year')
 df_rain_f.plot.scatter(x='Year', y='Rainfall', label='Rainfall by Year')
 
 # Merge the two dataframe using the merge function and with how set to outer
-df_merge = pd.merge(df_temp_f, df_rain_f, on='Year', how='outer')
+df_merge = pd.merge(df_temp_f, df_rain_f, on='Year', how='inner')
 print(df_merge)
+
+# Sort the data by Temperature using the pandas method sort_values, default is asc
+df_merge_sort_temp_asc = df_merge.sort_values(by='Temperature')
+print(df_merge_sort_temp_asc)
+df_merge_sort_temp_desc = df_merge.sort_values(by='Temperature', ascending=False)
+print(df_merge_sort_temp_desc)
+
+# Sort the data by Rainfall using the pandas method sort_values, default is asc
+df_merge_sort_rain_asc = df_merge.sort_values(by='Rainfall')
+print(df_merge_sort_rain_asc)
+df_merge_sort_rain_desc = df_merge.sort_values(by='Rainfall', ascending=False)
+print(df_merge_sort_rain_desc)
 
 # Show the scatter pot using the pyplot function show
 # Note this shows all currently plotted graphs
-plt.show()
+# plt.show()
 
